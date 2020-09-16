@@ -5,8 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+
+    
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAO4yR-WM9GNX6GV6o0cMcdeeumzy4sDgk",
+        authDomain: "todoapp-3b19f.firebaseapp.com",
+        databaseURL: "https://todoapp-3b19f.firebaseio.com",
+        projectId: "todoapp-3b19f",
+        storageBucket: "todoapp-3b19f.appspot.com",
+        messagingSenderId: "865123622026",
+        appId: "1:865123622026:web:e0d494db7668a4cc86a173",
+        measurementId: "G-NSDF41Q8GY"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 
 <body>
@@ -16,28 +36,27 @@
             <h1>Todo App</h1>
         </div>
 
-        <div class="row h-100">
+        <div class="row h-100 mt-5">
             <div class="col-6">
-
                 <input type="text" placeholder="Enter your task" id="todo-item" />
             </div>
             <div class="my-auto col">
-                <button type="button" onclick="addTodo()" class="btn btn-primary">ADD TASK</button>
+                <button type="button" onclick="saveData()" class="btn btn-primary">ADD TASK</button>
             </div>
             <div class="my-auto col">
                 <button type="button" onclick="deleteAll()" class="btn btn-danger">DELETE ALL</button>
             </div>
         </div>
 
-        <!-- <div class="inputField">
-            <span><i class="fa fa-plus-circle" aria-hidden="true" onclick="addTodo()"></i></span>
-            <span><i class="fa fa-trash" aria-hidden="true" onclick="deleteAll()"></i></span>
-
-        </div> -->
-
         <div id="main-section" class=" container mt-5">
         </div>
+
+
     </div>
+
+            
+
+
 
 
 </body>

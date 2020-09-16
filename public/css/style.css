@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 h1 {
@@ -67,3 +67,9 @@ input[type="text"] {
     color: #ffff !important;
     margin-left: 20px;
 }
+
+.ul-div {
+    margin-top: 30px;
+}
+
+  
